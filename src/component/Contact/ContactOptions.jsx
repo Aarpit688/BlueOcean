@@ -2,6 +2,7 @@ import React from "react";
 import { MdEmail, MdCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 const ContactOptions = () => {
   const { isDarkMode } = useTheme();
@@ -55,20 +56,31 @@ const ContactOptions = () => {
   ];
 
   return (
-    <section className={`py-16 px-6 md:px-20 text-center max-w-7xl mx-auto ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <MotionSection 
+      className={`py-16 px-6 md:px-20 text-center max-w-7xl mx-auto ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}
+      animationType="fadeUp"
+      duration={0.8}
+      delay={0.2}
+    >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
         {contacts.map((contact, index) => (
-          <div key={index}>
+          <MotionSection
+            key={index}
+            className="flex flex-col items-center"
+            animationType="fadeUp"
+            duration={0.6}
+            delay={0.1 * index}
+          >
             <div className="flex justify-center mb-4">
               <div className={`p-4 rounded-full ${isDarkMode ? 'bg-gray-800' : 'bg-white border border-gray-200'}`}>{contact.icon}</div>
             </div>
             <h3 className={`font-bold text-lg mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{contact.title}</h3>
             <p className={`mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{contact.desc}</p>
             <div>{contact.action}</div>
-          </div>
+          </MotionSection>
         ))}
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

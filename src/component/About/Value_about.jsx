@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLightbulb, FaUsers, FaBullseye, FaBolt } from "react-icons/fa";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 const values = [
   {
@@ -33,7 +34,12 @@ export default function Value_about() {
   const { isDarkMode } = useTheme();
   
   return (
-    <section className={`relative py-20 px-4 overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <MotionSection 
+      className={`relative py-20 px-4 overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}
+      animationType="fadeUp"
+      duration={0.8}
+      delay={0.4}
+    >
       {/* Polygon background with bottom diagonal cut (shape is custom!) */}
       <div
         className={`absolute bottom-0 left-0 w-full h-[340px] ${isDarkMode ? 'bg-white' : 'bg-gray-200'}`}
@@ -46,25 +52,33 @@ export default function Value_about() {
 
       <div className="relative max-w-6xl mx-auto z-10">
         {/* Header inside main content */}
-        <div className="text-center mb-16">
+        <MotionSection 
+          className="text-center mb-16"
+          animationType="fadeUp"
+          duration={0.6}
+          delay={0.2}
+        >
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             What We Stand For
           </h2>
           <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Our core values guide everything we do.
           </p>
-        </div>
+        </MotionSection>
 
         {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <div
+            <MotionSection
               key={index}
               className={`text-center p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 border ${
                 isDarkMode 
                   ? 'bg-gray-800 border-gray-700 hover:shadow-xl' 
                   : 'bg-white border-gray-200 hover:shadow-lg'
               }`}
+              animationType="fadeUp"
+              duration={0.6}
+              delay={0.1 * index}
             >
               {/* Icon Circle */}
               <div className="flex justify-center mb-6">
@@ -83,10 +97,10 @@ export default function Value_about() {
               <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 {value.description}
               </p>
-            </div>
+            </MotionSection>
           ))}
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 }

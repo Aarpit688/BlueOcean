@@ -5,12 +5,17 @@ import MapSection from "../component/Contact/MapSection";
 import WhySection from "../component/Contact/WhySection";
 import Img1 from "../assets/blue_lotus_logo.png";
 import { useTheme } from '../contexts/ThemeContext';
+import MotionSection from "../MotionSection.jsx";
 
 const ContactUs = () => {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className={isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}>
+    <MotionSection 
+      className={isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}
+      animationType="fadeUp"
+      duration={0.8}
+    >
       <Banner
         overlayBg={isDarkMode ? "bg-black/60" : "bg-black/30"}
         backgroundImage={Img1}
@@ -31,7 +36,7 @@ const ContactUs = () => {
           "Whether you are an experienced trader or just starting out, we've built a support system that can give you the help you require when you require it.",
         ]}
       />
-    </div>
+    </MotionSection>
   );
 };
 

@@ -3,12 +3,17 @@
 import React from "react";
 import Button from "../Button";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 export default function Hero_brand() {
   const { isDarkMode } = useTheme();
   
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <MotionSection 
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      animationType="fadeUp"
+      duration={0.8}
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -38,6 +43,6 @@ export default function Hero_brand() {
           LEARN MORE
         </Button>
       </div>
-    </section>
+    </MotionSection>
   );
 }

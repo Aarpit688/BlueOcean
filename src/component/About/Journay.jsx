@@ -1,11 +1,17 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 export default function Journay() {
   const { isDarkMode } = useTheme();
   
   return (
-    <section className={`w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <MotionSection 
+      className={`w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}
+      animationType="fadeUp"
+      duration={0.7}
+      delay={0.2}
+    >
       <div className="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
         <h2 className={`text-4xl sm:text-5xl lg:text-5xl font-bold mb-8 text-balance ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           Our Journey
@@ -17,6 +23,6 @@ export default function Journay() {
           products that people love to use.
         </p>
       </div>
-    </section>
+    </MotionSection>
   );
 }

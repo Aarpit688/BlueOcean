@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 import Video from "../../assets/Video.mp4";
+import MotionSection from "../../MotionSection.jsx";
 
 export default function Hero_about_1() {
   const { isDarkMode } = useTheme();
@@ -9,7 +10,11 @@ export default function Hero_about_1() {
     "Discover sustainable home goods that bring tranquility and style to your personal space.";
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <MotionSection 
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      animationType="fadeUp"
+      duration={0.8}
+    >
       {/* Video Element */}
       <div className="absolute inset-0 flex items-center justify-center">
         <video 
@@ -36,6 +41,6 @@ export default function Hero_about_1() {
           {description}
         </p>
       </div>
-    </section>
+    </MotionSection>
   );
 }

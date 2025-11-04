@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 const Banner = ({
   backgroundImage,
@@ -10,9 +11,11 @@ const Banner = ({
   const { isDarkMode } = useTheme();
   
   return (
-    <div
+    <MotionSection
       className="relative h-[90vh] md:h-[86vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
+      animationType="fadeUp"
+      duration={0.8}
     >
       <div className="h-full max-w-7xl mx-auto flex items-center justify-start px-10">
         {/* Overlay */}
@@ -24,7 +27,7 @@ const Banner = ({
           <p className={`text-lg md:text-xl mb-6 ${isDarkMode ? 'text-white' : 'text-gray-200'}`}>{description}</p>
         </div>
       </div>{" "}
-    </div>
+    </MotionSection>
   );
 };
 

@@ -4,6 +4,7 @@ import { Button } from "../../component/Button";
 import Cardimg1 from "../../assets/blue_lotus_logo.png";
 import { Meteors } from "../../registry/magicui/meteors";
 import { useTheme } from '../../contexts/ThemeContext';
+import MotionSection from "../../MotionSection.jsx";
 
 export default function Blue_ocean() {
   const { isDarkMode } = useTheme();
@@ -65,7 +66,11 @@ export default function Blue_ocean() {
         {/* Content container with higher z-index */}
         <div className="relative z-10">
           {/* Header Section */}
-          <section className="py-16 px-4 text-center">
+          <MotionSection 
+            className="py-16 px-4 text-center"
+            animationType="fadeUp"
+            duration={0.8}
+          >
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               Discover the World of{" "}
               <span className="text-blue-400">Blue Ocean</span>
@@ -74,17 +79,27 @@ export default function Blue_ocean() {
               We are a family of brands inspired by the beauty and power of the sea.
               Explore our innovative products designed to enhance your life.
             </p>
-          </section>
+          </MotionSection>
 
           {/* Product Cards Section */}
-          <section className="px-4 pb-20">
+          <MotionSection 
+            className="px-4 pb-20"
+            animationType="fadeUp"
+            duration={0.8}
+            delay={0.3}
+          >
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
               {/* AQUA PURE Card */}
-              <div className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
-                isDarkMode 
-                  ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
-                  : 'bg-white border-gray-200 hover:shadow-orange-500/40'
-              }`}>
+              <MotionSection
+                className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
+                  isDarkMode 
+                    ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
+                    : 'bg-white border-gray-200 hover:shadow-orange-500/40'
+                }`}
+                animationType="fadeUp"
+                duration={0.6}
+                delay={0.2}
+              >
                 <div className="bg-orange-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
                   <img
                     src={Cardimg1}
@@ -109,14 +124,19 @@ export default function Blue_ocean() {
                     Explore More
                   </Button>
                 </div>
-              </div>
+              </MotionSection>
 
               {/* TIDAL WAVE Card */}
-              <div className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
-                isDarkMode 
-                  ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
-                  : 'bg-white border-gray-200 hover:shadow-orange-500/40'
-              }`}>
+              <MotionSection
+                className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
+                  isDarkMode 
+                    ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
+                    : 'bg-white border-gray-200 hover:shadow-orange-500/40'
+                }`}
+                animationType="fadeUp"
+                duration={0.6}
+                delay={0.4}
+              >
                 <div className="bg-orange-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
                   <img
                     src={Cardimg1}
@@ -141,9 +161,11 @@ export default function Blue_ocean() {
                     Explore More
                   </Button>
                 </div>
-              </div>
+              </MotionSection>
+
             </div>
-          </section>
+          </MotionSection>
+
         </div>
       </main>
     </div>
