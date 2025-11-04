@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function JourneySection() {
+export default function Journay() {
   const { isDarkMode } = useTheme();
   
   return (

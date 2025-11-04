@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 import Video from "../../assets/Video.mp4";
 
-export default function HeroSection() {
+export default function Hero_about_1() {
   const { isDarkMode } = useTheme();
   const title = "Mindful Living, Beautifully Designed.";
   const description =

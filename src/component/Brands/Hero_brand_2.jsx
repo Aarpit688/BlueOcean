@@ -4,7 +4,7 @@ import React from "react";
 import Button from "../Button";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function HeroSection2() {
+export default function Hero_brand_2() {
   const { isDarkMode } = useTheme();
   
   return (

@@ -1,12 +1,12 @@
 import React from "react";
-import { Linkedin, Twitter } from "lucide-react";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image1 from "../../assets/Person1.jpg";
 import Image2 from "../../assets/Person2.jpg";
 import Image3 from "../../assets/Person3.jpg";
 import Image4 from "../../assets/Person4.jpg";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function TeamSection({ members }) {
+export default function Team_section({ members }) {
   const { isDarkMode } = useTheme();
   const defaultMembers = [
     {
@@ -101,7 +101,7 @@ export default function TeamSection({ members }) {
                     aria-label={`${member.name} LinkedIn`}
                     className={isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'}
                   >
-                    <Linkedin size={20} />
+                    <FaLinkedin size={20} />
                   </a>
                 )}
                 {member.twitter && (
@@ -110,7 +110,7 @@ export default function TeamSection({ members }) {
                     aria-label={`${member.name} Twitter`}
                     className={isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'}
                   >
-                    <Twitter size={20} />
+                    <FaTwitter size={20} />
                   </a>
                 )}
               </div>

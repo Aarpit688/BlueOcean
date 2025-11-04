@@ -5,7 +5,7 @@ import Cardimg1 from "../../assets/blue_lotus_logo.png";
 import { Meteors } from "../../registry/magicui/meteors";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function BlueOcean() {
+export default function Blue_ocean() {
   const { isDarkMode } = useTheme();
   const navigate = useNavigate();
   

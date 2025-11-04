@@ -1,35 +1,35 @@
 import React from "react";
-import { Lightbulb, Users, Target, Zap } from "lucide-react";
+import { FaLightbulb, FaUsers, FaBullseye, FaBolt } from "react-icons/fa";
 import { useTheme } from '../../contexts/ThemeContext';
 
 const values = [
   {
-    icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
+    icon: <FaLightbulb className="w-8 h-8 text-blue-400" />,
     title: "Innovation",
     description:
       "We constantly seek better ways to solve problems and are not afraid to challenge the status quo.",
   },
   {
-    icon: <Users className="w-8 h-8 text-blue-400" />,
+    icon: <FaUsers className="w-8 h-8 text-blue-400" />,
     title: "Collaboration",
     description:
       "We believe the best results come from working together, sharing ideas, and supporting each other.",
   },
   {
-    icon: <Target className="w-8 h-8 text-blue-400" />,
+    icon: <FaBullseye className="w-8 h-8 text-blue-400" />,
     title: "Customer-Centric",
     description:
       "Our customers are at the heart of everything we do. Their success is our success.",
   },
   {
-    icon: <Zap className="w-8 h-8 text-blue-400" />,
+    icon: <FaBolt className="w-8 h-8 text-blue-400" />,
     title: "Excellence",
     description:
       "We hold ourselves to the highest standards, striving for quality and polish in every detail.",
   },
 ];
 
-export default function ValuesSection() {
+export default function Value_about() {
   const { isDarkMode } = useTheme();
   
   return (

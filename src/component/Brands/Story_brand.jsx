@@ -3,7 +3,7 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function StorySection() {
+export default function Story_brand() {
   const { isDarkMode } = useTheme();
   
   return (

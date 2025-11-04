@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CTASection() {
+export default function website_brand() {
   return (
     <section className="w-full bg-blue-900 py-20 px-4 sm:py-24 md:py-32">
       <div className="max-w-4xl mx-auto text-center">
