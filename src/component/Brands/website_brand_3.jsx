@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function website_brand_3() {
+export default function WebsiteBrand3() {
   const { isDarkMode } = useTheme();
   
   return (

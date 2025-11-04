@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
 
-export default function website_brand_2() {
+function WebsiteBrand2() {
   const { isDarkMode } = useTheme();
   
   return (
@@ -22,3 +22,5 @@ export default function website_brand_2() {
     </section>
   );
 }
+
+export default WebsiteBrand2;
