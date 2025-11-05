@@ -3,7 +3,7 @@ import Hero_brand_2 from "../Brands/Hero_brand_2";
 import Story_brand_2 from "../Brands/Story_brand_2";
 import WebsiteBrand3 from "../Brands/website_brand_3.jsx";
 import { useTheme } from '../../contexts/ThemeContext';
-import ScrollToTop from "../ScrollToTop.jsx";
+import ScrollToTop from "../scrolltotop.jsx";
 
 export default function Brand2() {
   const { isDarkMode } = useTheme();
