@@ -80,13 +80,13 @@ export default function Footer() {
             <h3 className={`font-bold text-lg mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Products</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/brands" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
-                  Aqua Pure
+                <Link to="/Brand1" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
+                  Wonderplast
                 </Link>
               </li>
               <li>
-                <Link to="/brands" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
-                  Tidal Wave
+                <Link to="/Brand2" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
+                  Bangle Boutique
                 </Link>
               </li>
               <li>
@@ -106,16 +106,7 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <a href="#" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>
-                  Careers
-                </a>
-              </li>
+             
             </ul>
           </div>
 

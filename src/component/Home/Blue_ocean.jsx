@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { Button } from "../../component/Button";
-import Cardimg1 from "../../assets/blue_lotus_logo.png";
+import WonderplastLogo from "../../assets/blue_lotus_logo.png"; // Replace with actual Wonderplast logo
+import BangleBoutiqueLogo from "../../assets/blue_lotus_logo.png"; // Replace with actual Bangle Boutique logo
 import { Meteors } from "../../registry/magicui/meteors";
 import { useTheme } from '../../contexts/ThemeContext';
 import MotionSection from "../../MotionSection.jsx";
@@ -9,14 +10,14 @@ import MotionSection from "../../MotionSection.jsx";
 export default function Blue_ocean() {
   const { isDarkMode } = useTheme();
   const navigate = useNavigate();
-  
+
   const handleExploreMore = () => {
     navigate('/brand1');
   };
   const handleExploreMore2 = () => {
     navigate('/brand2');
   };
-  
+
   return (
     <div>
       <style>{`
@@ -72,12 +73,10 @@ export default function Blue_ocean() {
             duration={0.8}
           >
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              Discover the World of{" "}
-              <span className="text-blue-400">Blue Ocean</span>
+              Discover the World of <span className="text-blue-400">Blue Ocean</span>
             </h1>
             <p className={`max-w-2xl mx-auto text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              We are a family of brands inspired by the beauty and power of the sea.
-              Explore our innovative products designed to enhance your life.
+              We are a family of brands, each dedicated to providing unique products and exceptional quality. Explore our diverse companies, each a leader in their field.
             </p>
           </MotionSection>
 
@@ -89,36 +88,34 @@ export default function Blue_ocean() {
             delay={0.3}
           >
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-              {/* AQUA PURE Card */}
+              {/* Wonderplast Card */}
               <MotionSection
                 className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
                   isDarkMode 
-                    ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
-                    : 'bg-white border-gray-200 hover:shadow-orange-500/40'
+                    ? 'bg-gray-800 border-gray-700 hover:shadow-blue-500/80' 
+                    : 'bg-white border-gray-200 hover:shadow-blue-500/40'
                 }`}
                 animationType="fadeUp"
                 duration={0.6}
                 delay={0.2}
               >
-                <div className="bg-orange-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
+                <div className="bg-blue-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
                   <img
-                    src={Cardimg1}
-                    alt="Tidal Wave"
+                    src={WonderplastLogo}
+                    alt="Wonderplast"
                     className="w-full h-full object-cover"
                     style={{ display: "block" }}
                   />
                 </div>
                 <div className="p-8 text-center">
-                  <h2 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-orange-400' : 'text-orange-600'}`}>
-                    TIDAL WAVE
+                  <h2 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+                    Wonderplast
                   </h2>
                   <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    Embrace the energy of the ocean. Tidal Wave creates
-                    high-performance surfwear and gear for the adventurous spirit in
-                    everyone.
+                    A leading name in high-quality PVC pipes, water tanks, and fittings. Discover durable and innovative solutions for all your water management needs.
                   </p>
                   <Button 
-                    className="bg-orange-500 hover:bg-orange-600 text-white"
+                    className="bg-blue-500 hover:bg-blue-600 text-white"
                     onClick={handleExploreMore}
                   >
                     Explore More
@@ -126,46 +123,42 @@ export default function Blue_ocean() {
                 </div>
               </MotionSection>
 
-              {/* TIDAL WAVE Card */}
+              {/* Bangle Boutique Card */}
               <MotionSection
                 className={`shine-border rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 p-[5px] ${
                   isDarkMode 
-                    ? 'bg-gray-800 border-gray-700 hover:shadow-orange-500/80' 
-                    : 'bg-white border-gray-200 hover:shadow-orange-500/40'
+                    ? 'bg-gray-800 border-gray-700 hover:shadow-pink-500/80' 
+                    : 'bg-white border-gray-200 hover:shadow-pink-500/40'
                 }`}
                 animationType="fadeUp"
                 duration={0.6}
                 delay={0.4}
               >
-                <div className="bg-orange-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
+                <div className="bg-pink-900 h-100 flex items-center justify-center overflow-hidden rounded-t-lg">
                   <img
-                    src={Cardimg1}
-                    alt="Tidal Wave"
+                    src={BangleBoutiqueLogo}
+                    alt="Bangle Boutique"
                     className="w-full h-full object-cover"
                     style={{ display: "block" }}
                   />
                 </div>
                 <div className="p-8 text-center">
-                  <h2 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-orange-400' : 'text-orange-600'}`}>
-                    TIDAL WAVE
+                  <h2 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-pink-400' : 'text-pink-600'}`}>
+                    Bangle Boutique
                   </h2>
                   <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    Embrace the energy of the ocean. Tidal Wave creates
-                    high-performance surfwear and gear for the adventurous spirit in
-                    everyone.
+                    An exclusive online destination for beautiful bangles. Explore a handpicked collection of bridal chura, kadas, and stylish everyday designs.
                   </p>
-                   <Button 
-                    className="bg-orange-500 hover:bg-orange-600 text-white"
+                  <Button 
+                    className="bg-pink-500 hover:bg-pink-600 text-white"
                     onClick={handleExploreMore2}
                   >
                     Explore More
                   </Button>
                 </div>
               </MotionSection>
-
             </div>
           </MotionSection>
-
         </div>
       </main>
     </div>

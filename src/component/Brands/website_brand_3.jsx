@@ -1,11 +1,12 @@
 import React from "react";
 import { useTheme } from '../../contexts/ThemeContext';
-
+import ScrollToTop from "../scrolltotop";
 export default function WebsiteBrand3() {
   const { isDarkMode } = useTheme();
   
   return (
     <section className={`w-full py-20 px-4 sm:py-24 md:py-32 ${isDarkMode ? 'bg-blue-900' : 'bg-blue-800'}`}>
+      <ScrollToTop />
       <div className="max-w-4xl mx-auto text-center">
         <h2 className={`text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6 text-balance ${isDarkMode ? 'text-white' : 'text-gray-100'}`}>
           Explore Our Full Collection

@@ -14,10 +14,10 @@ const ContactOptions = () => {
       desc: "Email our support team for general queries or platform assistance.",
       action: (
         <a
-          href="mailto:support@primeforexmarket.com"
+          href="mailto:support@wonderplast.in"
           className={`font-semibold hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}
         >
-          support@primeforexmarket.com
+          support@wonderplast.in
         </a>
       ),
     },
@@ -27,10 +27,10 @@ const ContactOptions = () => {
       desc: "Call us and speak to a member of our team. We are always happy to help.",
       action: (
         <a
-          href="tel:+6495585142"
+          href="tel:+919310040234"
           className={`font-semibold hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}
         >
-          +64 9 558 5142
+          +91 9310040234
         </a>
       ),
     },
@@ -40,7 +40,7 @@ const ContactOptions = () => {
       desc: "Get in touch with our team members over WhatsApp.",
       action: (
         <a
-          href="https://wa.me/6495585142"
+          href="https://wa.me/9310040234"
           target="_blank"
           rel="noopener noreferrer"
           className={`font-semibold px-4 py-1 rounded transition-all ${

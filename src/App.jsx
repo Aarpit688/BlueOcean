@@ -18,65 +18,66 @@ const ThemedApp = () => {
 
   return (
     <div
-      className={`min-h-screen ${
-        isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'
-      }`}
-    >
-      <Router>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <MotionSection>
-                <Home />
-              </MotionSection>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <MotionSection>
-                <About />
-              </MotionSection>
-            }
-          />
-          <Route
-            path="/brands"
-            element={
-              <MotionSection>
-                <Brands />
-              </MotionSection>
-            }
-          />
-          <Route
-            path="/brand1"
-            element={
-              <MotionSection>
-                <Brand1 />
-              </MotionSection>
-            }
-          />
-          <Route
-            path="/brand2"
-            element={
-              <MotionSection>
-                <Brand2 />
-              </MotionSection>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <MotionSection>
-                <Contact />
-              </MotionSection>
-            }
-          />
-        </Routes>
-        <Footer />
-      </Router>
-    </div>
+  className={`min-h-screen overflow-x-hidden overflow-y-hidden ${
+    isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'
+  }`}
+>
+  <Router>
+    <Header />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MotionSection>
+            <Home />
+          </MotionSection>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <MotionSection>
+            <About />
+          </MotionSection>
+        }
+      />
+      <Route
+        path="/brands"
+        element={
+          <MotionSection>
+            <Brands />
+          </MotionSection>
+        }
+      />
+      <Route
+        path="/brand1"
+        element={
+          <MotionSection>
+            <Brand1 />
+          </MotionSection>
+        }
+      />
+      <Route
+        path="/brand2"
+        element={
+          <MotionSection>
+            <Brand2 />
+          </MotionSection>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <MotionSection>
+            <Contact />
+          </MotionSection>
+        }
+      />
+    </Routes>
+    <Footer />
+  </Router>
+</div>
+
   );
 };
 
