@@ -12,7 +12,6 @@ import Contact from "./views/Contact";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { useTheme } from "./contexts/ThemeContext";
 import MotionSection from "./MotionSection";
-import ScrollToTop from "./component/ScrollToTop";
 
 const ThemedApp = () => {
   const { isDarkMode } = useTheme();
@@ -23,7 +22,6 @@ const ThemedApp = () => {
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
-      <ScrollToTop />
       <Router>
         <Header />
         <Routes>
