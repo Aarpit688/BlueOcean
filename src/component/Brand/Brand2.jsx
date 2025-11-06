@@ -5,6 +5,7 @@ import WebsiteBrand3 from "../Brands/website_brand_3.jsx";
 import { useTheme } from '../../contexts/ThemeContext';
 import Scrolltotop from "../Scrolltotop.jsx";
 
+// Force rebuild by adding comment
 export default function Brand2() {
   const { isDarkMode } = useTheme();
   
